@@ -1,0 +1,61 @@
+\section{Overview of Studies}
+%\begin{landscape}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Machine Learning 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{table}[H]
+  \centering
+ 
+  \caption{Overview of Studies using SVM.}
+   \label{tab:ml}
+  \scalebox{0.8}{
+  \def\arraystretch{1.5}
+    \begin{tabular}{lllllllll}
+    \hline
+    \multicolumn{1}{l}{\textbf{Study}} & \multicolumn{1}{l}{\textbf{N} training} & \multicolumn{1}{l}{\textbf{Database}} & \multicolumn{1}{l}{\textbf{Model}}& \multicolumn{1}{l}{\textbf{Feature}} &  \multicolumn{1}{c}{\textbf{Validation}}& \multicolumn{1}{c}{\textbf{Acc} (\%)} & \multicolumn{1}{c}{\textbf{Sens} (\%)} & \multicolumn{1}{c}{\textbf{Spec} (\%)}  \\ \hline \hline %%vertikale linie mit |
+
+          
+          
+          
+    \multicolumn{1}{l}{\cite{syaifullahMachineLearningDiagnosis2021}} & 723 (321 AD, 335 NC) & \multicolumn{1}{l}{\acrshort{adni}} & \multicolumn{1}{l}{\gls{svm} (\gls{rbf}) } & ROI & \gls{loocv} &93.3 & 93.3 & 93.4 \\
+           &  & \multicolumn{1}{l}{\gls{aibl}*} &  &  &  & 89.20 & 94.40 & 90.10\\
+           &  & \multicolumn{1}{l}{JADNI*} &  &  &  & 88.00 & 85.10 & 90.80\\
+           &  & \multicolumn{1}{l}{\gls{miriad}*} &  &  &  & 94.20 & 97.80 & 87.00\\
+           &  & \multicolumn{1}{l}{\gls{oasis}*} &  &  &  & 90.60 & 96.70 & 88.80\\
+        \\
+          
+    \multicolumn{1}{l}{\cite{akramifardEmphasisLearningFeatures2020}} & 705 \footnotesize (156 AD, 338 MCI, 211 NC) & \multicolumn{1}{l}{\gls{adni}} & \gls{svm} (Linear kernel) & \gls{roi}** & 10-fold CV   & 98.81     & 98.52     & 99.21 \\
+         \\     
+         
+         
+          
+    \multicolumn{1}{l}{\cite{liPredictionClinicalBiomarker2020}} & 400 (136 AD, 268 NC) & \multicolumn{1}{l}{ADNI} & SVM (Gaussian kernel) & ROI, \gls{etiv}, \gls{wmsa} & CV & 97.03 & 94.12 & 98.51 \\
+    
+          &  & \multicolumn{1}{l}{D3* (\textit{n = 66})} &  &  &  & 84.85 & 85.36 & 84.00\\
+
+          \\
+          
+    \multicolumn{1}{l}{\cite{khatriEfficientCombinationSMRI2020a}} & 187 (136 AD, 268 NC) & \multicolumn{1}{l}{ADNI} & SVM (Linear kernel) & \gls{roi}** & 10-fold CV & 93.50 & 95.33 & 90.58  \\
+\\
+
+  \multicolumn{1}{l}{\cite{richhariyaDiagnosisAlzheimerDisease2020}} & 150 (50 AD, 50 MCI, 50 NC) & \multicolumn{1}{l}{\gls{adni}} & \multicolumn{1}{l}{\gls{uvsm-rfe} (Linear kernel)} & \gls{roi}** & 10-fold CV   & 100     & -     & - \\
+   
+   &  & \multicolumn{1}{l}{ADNI* (\textit{n = 813})} &  &  &  & 89.20 & 84.87 & 93.13\\
+    \hline \hline
+    
+    \multicolumn{8}{l}{Acc = Accurracy, Sens = Sensitivity, Spec = Specificity, * = independent dataset, ** = additionally, other modalities were used}
+    \end{tabular} }
+  
+\end{table}%
+%\end{landscape}
+
+
+

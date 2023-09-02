@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage{UF_FRED_paper_style}
+
+
+
+
+\begin{document}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{head/titlepage}
+
+\clearpage
+
+
+\pagenumbering{roman}
+
+%%%TOC
+\hypersetup{linkcolor=black}
+\tableofcontents
+\addtocontents{toc}{~\hfill\textbf{Page}\par}
+
+\newpage
+
+\listoffigures
+\listoftables
+\newpage
+\hypersetup{linkcolor=blue}
+\pagenumbering{arabic}
+\input{glossar} 
+
+% ABSTRACT
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\setstretch{.8}
+% %%%%%%%%%%%%%%%%%%
+\input{head/abstract}
+}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BODY OF THE DOCUMENT
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\input{body/Introduction}
+\newpage
+
+\input{body/Theoretical Background}
+\newpage
+
+\input{body/Method}
+\newpage
+
+\input{body/Results}
+\newpage
+
+\input{body/Discussion}
+
+
+\input{body/Conclusion}
+\newpage
+
+
+
+
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% REFERENCES SECTION
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\newpage
+\addcontentsline{toc}{section}{References}
+\sloppy %%für Line Break im Verzeichnis
+\printbibliography \pagestyle{MyFancy}
+
+\newpage
+\appendix
+\renewcommand\thesection{\Alph{section}}
+\renewcommand{\glossarysection}[2][]{}
+
+\section{List of Abbreviations}
+
+\setglossarystyle{listhypergroup}
+\printglossary[title=List of Abbreviations,toctitle = List of Abbreviations,,type =\acronymtype]
+
+\newpage
+\input{tables/andigroups}
+
+
+\newpage
+\begin{landscape}
+\input{tables/ML-table}
+\end{landscape}
+
+\newpage
+\begin{landscape}
+\input{tables/DL-table}
+\end{landscape}
+% ==========================
+% ==========================
+% ==========================
+\newpage
+\includepdf[page=1]{Selbst}
+
+\end{document}

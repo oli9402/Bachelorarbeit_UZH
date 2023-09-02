@@ -1,0 +1,96 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{mathptmx} %{times}
+\usepackage{palatino}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{titling} % drop vertical space before the title
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{amsmath}
+\usepackage{grffile}
+\usepackage{amssymb}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[english]{babel}
+\usepackage{subcaption}
+\usepackage[a4paper, total={6in, 9.5in}]{geometry}
+\fontfamily{ppl}\selectfont 
+\usepackage{lipsum}
+\usepackage{mathptmx}
+\usepackage{color,soul}
+\usepackage[format=hang]{caption}
+\usepackage{adjustbox}
+\usepackage{pdflscape}
+\usepackage{pdfpages}
+%Zeilenabstand, so dass gleich 1.5 Zeilenabstand im Word
+\usepackage[onehalfspacing]{setspace}
+\makeatletter
+\renewcommand{\onehalfspacing}{
+  \setstretch{1.48}%  default
+  \ifcase \@ptsize \relax % 10pt
+    \setstretch {1.48}%
+  \or % 11pt
+    \setstretch {1.48}%
+  \or % 12pt
+    \setstretch {1.48}%
+  \fi
+}
+
+%%%Header
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.6pt} %%Dicke der Linie
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[R]{\rightmark} 
+\fancyfoot[L]{\includegraphics[width=2cm]{uzhlogo.png}}
+
+
+\fancypagestyle{MyFancy}{%              
+    \fancyhf{}%      
+    \fancyhead[L]{\nouppercase{\leftmark}}
+    \fancyfoot[C]{\thepage}
+    \fancyfoot[L]{\includegraphics[width=2cm]{uzhlogo.png}}
+       \renewcommand{\headrulewidth}{0.6pt} %%Dicke der Linie
+\renewcommand{\footrulewidth}{0.4pt}
+ }
+
+ %%%TOC tiefe
+\setcounter{tocdepth}{3}
+\usepackage{tocloft}
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftfigfont}{Figure }
+\renewcommand{\cfttabfont}{Table }
+
+%biber
+\usepackage[style=apa,backend=biber,babel=other]{biblatex}
+\DeclareLanguageMapping{american}{american-apa}
+\usepackage{csquotes} 
+\addbibresource{ref.bib}
+
+\geometry{left=3cm,bottom=2.5cm,right=3cm,top=3cm}
+
+
+\usepackage{tabularx,float,subcaption}
+\usepackage[justification=centering]{caption}
+\captionsetup[table]{labelfont= it,format=plain,singlelinecheck=false, ju}
+\captionsetup[figure]{format=hang, , justification=raggedright,labelfont=it}
+\usepackage{acronym}
+\usepackage[colorlinks,citecolor=blue, bookmarks = true,linktoc=all]{hyperref}
+\hypersetup{
+     colorlinks=true,
+     linkcolor=blue, %%List of Abbreviations
+     filecolor=black,
+     urlcolor=blue,
+     citecolor = blue,
+     %linktocpage,
+     }
+
+\renewcommand*{\glstextformat}[1]{\textcolor{black}{#1}}
+\usepackage[toc, acronym]{glossaries}
+\makeglossaries
+
+% BIBLIOGRAPHY %%%%%%%%%%%%%%
+%\usepackage[natbibapa]{apacite} % to enable '\citet' and '\citep' macros
+%\bibliographystyle{apacite}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%

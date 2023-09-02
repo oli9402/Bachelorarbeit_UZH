@@ -1,0 +1,87 @@
+\section{Supplementary Material}
+
+\begin{table}[H]
+\centering
+
+  \caption{Database Stratification in \autocite{yeeConstructionMRIBasedAlzheimer2021}.}
+    \label{tab:strati}
+  \scalebox{0.9}{
+  \def\arraystretch{1.5}
+\begin{tabular}{ll}
+\hline
+MRI image subgroup        & Description                                            \\
+\hline
+stable NC (sNC)        & Images of subjects with NC at all follow up screenings. \\
+unstable NC (uNC)      & Images of \gls{nc} subjects before converting to \gls{mci}.                                    \\
+progressive NC (pNC)   & Images of \gls{nc} subjects before converting to \gls{AD}.                                                       \\
+stable MCI (sMCI)      & Images of subjects with \gls{mci} at all follow up screenings.                                                      \\
+progressive MCI (pMCI) & Images of \gls{mci} subjects before converting to \gls{AD}.                                                      \\
+early DAT (eDAT)       & Images of \gls{mci} subjects after converting to \gls{AD}.                                                        \\
+stable DAT (sDAT)      & Images of subjects with diagnosis \gls{AD} at baseline.  \\
+\hline
+ \multicolumn{2}{l}{\multirow{1}{=}{\footnotesize \gls{dat} = Dementia of the Alzheimer's type, \gls{mci} = Mild Cognitive Impairment, \gls{nc} = Normal Cognition,\\ \gls{AD} = Alzheimer's Disease.}}
+\end{tabular}}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{4em}
+
+\begin{table}[H]
+\centering
+
+  \caption{3D Subject-level CNN Performance Evaluation in \autocite{yeeConstructionMRIBasedAlzheimer2021}.}
+    \label{tab:perf}
+  \scalebox{0.9}{
+  \def\arraystretch{1.5}
+\begin{tabular}{lcccc}
+\hline
+Performance        & \gls{adni}* & \gls{aibl} & \gls{oasis}  & \gls{miriad}**                                          \\
+\hline
+Overall accuracy            &   72.3\% & 86.6\% & 89.9\% & 94.7\% \\
+Overall specificity         & 68.7\% & 85.9\% & 89.9\% & 94.7\% \\
+Overall sensitivity         & 75.9\% & 87.6\% & 71.4\% & 96.8\% \\
+
+\hline
+\multicolumn{5}{l}{\multirow{2}{=}{\footnotesize * Validation set consisting of five subgroups: uNC, pNC, sMCI, pMCI, eDAT.\\
+** Testing set consisting of two subgroups: sNC, sDAT.}}
+\end{tabular}}
+\end{table}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\vspace{4em}
+
+\begin{table}[H]
+\centering
+
+  \caption{Strengths and Weaknesses of CNN and SVM.}
+    \label{tab:pro}
+  %\scalebox{0.9}{
+  \def\arraystretch{1.5}
+\begin{tabular}{p{1.5cm}|p{5cm}|p{5cm}}
+\hline
+ &     \textbf{Strengths} & \textbf{Weaknesses}   \\
+\hline
+\multirow[c]{6}{=}{\textbf{SVM}}         
+    &  \footnotesize  + global optimum is guaranteed                                             & \footnotesize  - heavily dependent on pre-processing steps \\
+    &  \footnotesize  + robust                                            & \footnotesize - choosing optimal kernel\\
+        & \footnotesize + good performance on high-dimensional data &\\
+    & \footnotesize + interpretability &\\
+    & \footnotesize + training on smaller data set & \\
+\hline
+\multirow[c]{6}{=}{\textbf{CNN}}         & \footnotesize + combines multiple steps in classification process  &\footnotesize - prone to over fitting \\
+    &\footnotesize + good for high-dimensional and complex data   &\footnotesize - global optimum not guaranteed\\
+    & \footnotesize + has shown great performance in other areas & \footnotesize - huge amount of training data needed for optimum results \\
+    & \footnotesize + can handle raw data well & \footnotesize - "black boxes" \\
+
+\hline
+
+\end{tabular}%}
+\end{table}
+
+

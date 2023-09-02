@@ -1,0 +1,54 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deep Learning
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{table}[H]
+  \centering
+ 
+  \caption{Overview of Studies using CNN.}
+   \label{tab:dl}
+  \scalebox{0.8}{
+  \def\arraystretch{1.5}
+    \begin{tabular}{lllllllll}
+    \hline
+    \multicolumn{1}{l}{\textbf{Study}} & \multicolumn{1}{l}{\textbf{N} training} & \multicolumn{1}{l}{\textbf{Database}} & \multicolumn{1}{l}{\textbf{Model}}& \multicolumn{1}{l}{\textbf{Feature}} &  \multicolumn{1}{c}{\textbf{Validation}}& \multicolumn{1}{c}{\textbf{Acc} (\%)} & \multicolumn{1}{c}{\textbf{Sens} (\%)} & \multicolumn{1}{c}{\textbf{Spec} (\%)}  \\ \hline \hline %%vertikale linie mit |
+
+          
+          
+          
+    \multicolumn{1}{l}{\cite{wenConvolutionalNeuralNetworks2020}} & 1255  & \multicolumn{1}{l}{ADNI} & \multicolumn{1}{l}{3D-\gls{cnn} } &  ROI &  5-fold CV  & 88.00 & - & -\\
+           &  & \multicolumn{1}{l}{\gls{adni}*(\textit{n = 200})} & 3D-\gls{cnn}  & ROI & 5-fold CV & 89.00 & - & -\\
+           &  & \multicolumn{1}{l}{\gls{oasis}*(\textit{n = 154})} & 3D-\gls{cnn} & ROI & 5-fold CV & 73.00& - & -\\
+           &  & \multicolumn{1}{l}{\gls{aibl}*(\textit{n = 598})} & 3D-\gls{cnn} & Voxel-based & 5-fold CV  & 86.00 & - & -\\
+          
+           
+        \\
+          
+    \multicolumn{1}{l}{\cite{yeeConstructionMRIBasedAlzheimer2021}} & 753 \footnotesize (330 AD,  423 NC) & \multicolumn{1}{l}{\gls{adni}} & 3D-CNN  & Voxel-based & 5-fold CV   & 88.10     & 88.30     & 88.10 \\
+             &  & \multicolumn{1}{l}{\gls{aibl}* } &  &  &  & 90.70 & - & -\\
+             &  & \multicolumn{1}{l}{\gls{oasis}*} &  &  &  & 91.90 & - & -\\
+            &  & \multicolumn{1}{l}{\gls{miriad}*} &  &  &  & 95.70 & - & -\\
+         
+          \\
+          
+    \multicolumn{1}{l}{\cite{liuMultimodelDeepConvolutional2020a}} & 449 (96 AD, 233 MCI 119 NC) & \multicolumn{1}{l}{ADNI*(\textit{n = 45})} & Two 3D CNNs & ROI & 5-fold CV & 88.90 & 86.60 & 90.80 \\
+    
+
+          \\
+          
+    \multicolumn{1}{l}{\cite{wangDenseCNNDenselyConnected2021}} & 933 (326 AD, 607 NC) & \multicolumn{1}{l}{ADNI} &  DenseCNN & \gls{roi} & 5-fold CV & 89.10 & 98.50 & 82.20  \\
+\\
+
+  \multicolumn{1}{l}{\cite{nanniComparisonTransferLearning2020}} & 773 (137 AD, 474 MCI, 162 NC) & \multicolumn{1}{l}{\gls{adni}} & \multicolumn{1}{l}{2D-\gls{cnn}} & Voxel-based & CV  & 90.20    & -     & - \\
+   
+  
+    \hline \hline
+    
+    \multicolumn{8}{l}{Acc = Accuracy, Sens = Sensitivity, Spec = Specificity, * = independent dataset}
+    \end{tabular} }
+  
+\end{table}%
